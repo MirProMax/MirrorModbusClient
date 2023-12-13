@@ -19,7 +19,7 @@ namespace MirrorModbus
 
 
         //读取单个40000的寄存器
-        public (int, int) read4_Single_Old(int inAddress_Nature)
+        public (int, int) read4_Single(int inAddress_Nature)
         {
             int checkCode;
             int offset = 40000;
@@ -45,30 +45,6 @@ namespace MirrorModbus
             return (checkCode, outValue);
         }
 
-        public int read4_Single(ref bool 外部连接状态, int inAddress_Nature)
-        {
-            int offset = 40000;
-            int outValue = 0;
-
-            try
-            {
-                int address = inAddress_Nature - offset;
-                if (address < 1)
-                {
-                    address = 1;
-                }
-
-                outValue = ReadHoldingRegisters(address - 1, 1)[0];
-                外部连接状态 = true;
-            }
-            catch (Exception e)
-            {
-                Debug.Log($"MirrorModbusClient: Read4: {e}");
-                外部连接状态 = false;
-            }
-
-            return outValue;
-        }
 
         public (int, int[]) read4_Batch_Original(int inStart_Nature, int? inLength_Nature = null)
         {
