@@ -1,0 +1,15 @@
+{
+    "name": "com.mirrorprostudio.mirrormodbusclient",
+    "version": "1.0.0",
+    "displayName": "Mirror Modbus Client",
+    "description": "",
+    "keywords": [
+        "Modbus",
+        "TCP"
+    ],
+    "author": {
+        "name": "Mirror Pro",
+        "email": "MirrorPro@qq.com",
+        "url": "https://space.bilibili.com/589323"
+    }
+}
