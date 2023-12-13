@@ -1,15 +1,15 @@
 {
-    "name": "com.mirrorprostudio.mirrormodbusclient",
-    "version": "1.0.0",
-    "displayName": "Mirror Modbus Client",
-    "description": "",
-    "keywords": [
-        "Modbus",
-        "TCP"
-    ],
-    "author": {
-        "name": "Mirror Pro",
-        "email": "MirrorPro@qq.com",
-        "url": "https://space.bilibili.com/589323"
-    }
+  "name": "com.mirrorprostudio.mirrormodbusclient",
+  "version": "1.0.0",
+  "displayName": "Mirror Modbus Client",
+  "description": "\u989d\u5916\u5c01\u88c5EasyModbus\uff0c\u4f7f\u5176\u66f4\u6613\u7528\u3002",
+  "keywords": [
+    "Modbus",
+    "TCP"
+  ],
+  "author": {
+    "name": "Mirror Pro",
+    "email": "MirrorPro@qq.com",
+    "url": "https://space.bilibili.com/589323"
+  }
 }
