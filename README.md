@@ -3,13 +3,14 @@
 - 可以利用此Package从Modbus TCP Server中读取数据或写入数据。
 
 # 如何使用？
-- 打开Unity Package Manager
+- 打开包管理器（Unity Package Manager）
 - 点击左上角的“+”图标
-- 选择“Git URL”
+- 选择“添加来自 git URL 的包……”
+- 填入此仓库的URL
 - 在你的CSharp文件开头加入“using MirrorModbus”
 - 在你的CSharp文件中实例化一个MirrorModbusClient对象，并使用该对象包含的方法，对Modbus TCP Server进行读写操作。
 
-# 关于关键的文件
+# 关于核心文件
 - EasyModbus.dll是基础文件。
 - MirrorModbusClient.cs额外提供了方便调用的方法。
 - 上述两个文件可以直接导入Unity Project的Asset文件夹中使用。
