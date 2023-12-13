@@ -6,7 +6,7 @@ using EasyModbus;
 using System.Security.Permissions;
 using UnityEditor.PackageManager;
 
-namespace Packages.MirrorModbus
+namespace MirrorModbus
 {
     public class MirrorModbusClient : ModbusClient
     {
