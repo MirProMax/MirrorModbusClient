@@ -50,7 +50,7 @@ namespace MirrorModbus
         {
             //返回代码0为正常,-1为异常
             int checkCode = 0;
-            int[] outArray;
+            int[] outArray = { };
 
             try
             {
@@ -82,7 +82,7 @@ namespace MirrorModbus
         public (int, int[]) read4_Batch_Nature(int inStart_Nature, int? inStop_Nature = null)
         {
             int checkCode;
-            int[] outArray;
+            int[] outArray = { };
 
             try
             {
