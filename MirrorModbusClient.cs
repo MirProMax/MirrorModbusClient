@@ -65,7 +65,6 @@ namespace MirrorModbus
                 int length_Nature = (int)((!inLength_Nature.HasValue || inLength_Nature < 1) ? 1 : inLength_Nature);
 
                 outArray = ReadHoldingRegisters(arrayStart_Nature - 1, length_Nature);
-
                 checkCode = 0;
             }
             catch (Exception e)
