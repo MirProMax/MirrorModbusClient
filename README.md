@@ -18,6 +18,6 @@
 - 上述两个文件也可以直接下载,并导入Unity Project的Asset文件夹中使用.
 <br/>
 
-# 如果你也想开发一个用于Unity3D的自定义Package(文件夹)
+# 如果你也想创建一个自定义的Package(文件夹)
 - 在文件夹中额外添加"*.asmdef"和"package.json",该文件夹的所有内容即可被Unity Package Manager识别.
 <br/>

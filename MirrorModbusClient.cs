@@ -19,7 +19,7 @@ namespace MirrorModbus
 
 
         //读取单个40000的寄存器
-        public (int, int) read4_Single(int inAddress_Nature)
+        public (int, int) read4_Single_Nature(int inAddress_Nature)
         {
             int checkCode;
             int offset = 40000;
