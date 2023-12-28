@@ -48,8 +48,9 @@ namespace MirrorModbus
 
         public (int, int[]) read4_Batch_Original(int inStart_Nature, int? inLength_Nature = null)
         {
-            int checkCode;
-            int[] outArray = { };
+            //返回代码0为正常,-1为异常
+            int checkCode = 0;
+            int[] outArray;
 
             try
             {
@@ -65,7 +66,7 @@ namespace MirrorModbus
 
                 outArray = ReadHoldingRegisters(arrayStart_Nature - 1, length_Nature);
 
-                checkCode = 1;
+                checkCode = 0;
             }
             catch (Exception e)
             {
@@ -76,12 +77,13 @@ namespace MirrorModbus
             return (checkCode, outArray);
         }
 
+
         //返回值的第[0]个元素用于判断成败,0以上为成功,-1为失败
         //输入两个参数,起始地址和结束地址,从40001开始
         public (int, int[]) read4_Batch_Nature(int inStart_Nature, int? inStop_Nature = null)
         {
             int checkCode;
-            int[] outArray = { -1 };
+            int[] outArray;
 
             try
             {
@@ -89,14 +91,15 @@ namespace MirrorModbus
 
                 int arrayStart_Nature = inStart_Nature - offset;
 
-                //如果停止位没有值,则数组的停止地址等于数组的起始地址(没有从1开始,而不是40001开始),否则数组停止位的值是4000*-40000;
+                //如果停止位没有值,则数组的停止地址等于数组的起始地址(没有从1开始,而不是40001开始)
+                //否则数组停止位的值是4000* - 40000;
                 //如果输入结束地址(4000*)小于起始地址,则数组结束的地址也是数组的起始地址.
                 int arrayStop_Nature = (int)((!inStop_Nature.HasValue || inStop_Nature < inStart_Nature) ? arrayStart_Nature : inStop_Nature.Value - offset);
-
                 if (arrayStart_Nature < 1)
                 {
                     arrayStart_Nature = 1;
                 }
+
 
                 int length_Nature = arrayStop_Nature - arrayStart_Nature + 1;
 
@@ -130,7 +133,7 @@ namespace MirrorModbus
                 }
 
                 WriteSingleRegister(address - 1, inValue);
-                return 1;
+                return 0;
             }
             catch (Exception e)
             {
