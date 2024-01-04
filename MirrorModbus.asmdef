@@ -1,6 +1,6 @@
 {
     "name": "MirrorModbus",
-    "rootNamespace": "",
+    "rootNamespace": "MirrorModbus",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

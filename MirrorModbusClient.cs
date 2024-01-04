@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EasyModbus;
-using System.Security.Permissions;
-using UnityEditor.PackageManager;
+// using System.Security.Permissions;
+// using UnityEditor.PackageManager;
 
 namespace MirrorModbus
 {
